@@ -11,5 +11,5 @@ services:
         condition: on-failure
     command: >
       bash -c "echo 'const http = require(\"http\");
-      http.createServer((req, res) => res.end(\"Hola mundo\")).listen(3000);'
+      http.createServer((req, res) => res.send(\"Hola mundo\")).listen(3000);'
       > index.js && node index.js"
